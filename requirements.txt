@@ -1,0 +1,11 @@
+Django~=5.0rc1
+torch~=2.1.1+cu118
+torchvision~=0.16.1
+tqdm~=4.66.1
+Pillow~=10.1.0
+django-crispy-forms~=2.1
+six~=1.16.0
+pandas~=2.1.4
+numpy~=1.26.2
+torchtext~=0.16.1
+nltk~=3.8.1
