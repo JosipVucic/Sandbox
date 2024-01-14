@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+.navbar-center {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: -1; /* Ensure it appears above other elements */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Montserrat, Consolas, Arial, Helvetica, sans-serif;
+}
+
+.nav-padding {
+    padding-top: 5rem;
+}
+
+.hero {
+    height: 100vh;
+}
+
+#projects {
+    height: 100vh;
+}
+
+.digit {
+    font-size: 10rem;
+}
+
+.sentiment {
+    font-size: 8rem;
+    font-family: Source Sans Pro, Montserrat, Consolas, Arial, Helvetica, sans-serif;
+}
+
+.asteriskField {
+    display: none;
+}

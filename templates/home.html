@@ -1,0 +1,60 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block hero %}
+<!-- Hero Section -->
+<section class="hero bg-dark text-white text-center d-flex align-items-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to My AI Sandbox</h1>
+        <p class="lead">Explore innovative AI projects and discover the possibilities.</p>
+        <a href="#projects" class="btn btn-light btn-lg">Explore Projects</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block sections %}
+<!-- Projects Section -->
+<section id="projects" class="nav-padding">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured Projects</h2>
+
+        <!-- Project Tiles -->
+        <div class="row">
+
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-body-tertiary">
+                    <img src="{% static 'digits/img/digits_project_image.png' %}" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Digits</h5>
+                        <p class="card-text">Explore the world of AI with Digits. Upload a zoomed-in image of a handwritten digit, and let our MNIST-based AI accurately classify it.</p>
+                        <a href="{% url 'digits:home' %}" class="btn btn-primary">Try it out</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 bg-body-tertiary">
+                    <img src="{% static 'sentiment/img/sentiment_project_image.png' %}" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Sentiment</h5>
+                        <p class="card-text">Experience NLP with Sentiment. Write a review of anything you can think of and see if AI can determine the sentiment of the review.</p>
+                        <a href="{% url 'sentiment:home' %}" class="btn btn-primary">Try it out</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more project tiles as needed -->
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block base_content %}
+{% endblock %}

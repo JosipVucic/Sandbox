@@ -1,0 +1,40 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Sentiment{% endblock %}
+{% block app_title %}Sentiment{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3 text-center">
+                {% if review_is_valid %}
+                <div class="bg-info-subtle p-4 rounded border border-info-subtle">
+                        <h1 class="sentiment">{{sentiment}}</h1>
+                        <h2 class="mb-0">Was the sentiment analysis correct?</h2>
+                </div>
+                {% else %}
+                <div class="bg-dark-subtle p-4 rounded border border-dark-subtle">
+                        <h2 class="mb-0">Awaiting input...</h2>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="bg-body-tertiary p-4 rounded">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="d-flex justify-content-center"> <!-- Center the button -->
+                            <button type="submit" class="btn btn-primary mt-3 w-100">Detect sentiment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+{% else %}
+    <p>Please log in to use the app.</p>
+{% endif %}
+{% endblock %}
