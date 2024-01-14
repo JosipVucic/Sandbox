@@ -36,7 +36,7 @@ Follow the instructions below to set up and run the Django web app with the incl
 1. Clone this repository:
    ```bash
    git clone https://github.com/JosipVucic/Sandbox.git
-   cd your-repo
+   cd Sandbox
    ```
 
 2. Migrate the database:
